@@ -131,7 +131,7 @@ export async function POST(req: NextRequest) {
 
   try {
     const response = await ai.models.generateContent({
-      model: process.env.GEMINI_MODEL || "gemini-flash-latest",
+      model: process.env.GEMINI_MODEL || "gemini-flash-lite-latest",
       contents: `RESUME:\n${resumeText}\n\nJOB DESCRIPTION:\n${jobDescription}`,
       config: {
         systemInstruction: SYSTEM_INSTRUCTION,
